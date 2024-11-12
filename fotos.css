@@ -1,0 +1,74 @@
+/* Estilo para el banner en el encabezado */
+header {
+    background-color:white;
+    color: aqua;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-slide {
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+.banner-slide .slide {
+    flex: 0 0 100%;
+}
+
+.banner-slide .slide img {
+    width: 50%;
+    height: auto;
+}
+
+/* Estilo para los botones de control */
+.slide-controls {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.slide-controls label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #777;
+    border-radius: 50%;
+    margin: 0px;
+    cursor: pointer;
+}
+
+/* Estilo para los botones de control seleccionados */
+input[type="radio"]:checked + .slide-controls label {
+    background-color: #f44336;
+}
+
+/* Estilo para ocultar los botones de radio */
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Animación del banner */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  
+  
+}
